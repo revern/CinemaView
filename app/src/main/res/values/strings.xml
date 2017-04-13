@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CinemaView</string>
+    <string name="view_chair_states">view chair states</string>
+    <string name="clear">Clear</string>
+    <string name="block_sold">block sold</string>
+    <string name="block_sold_and_reserved">block sold and reserved</string>
+</resources>

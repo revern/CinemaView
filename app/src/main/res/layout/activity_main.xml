@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.almaziskhakov.cinemaview.MainActivity"
+    >
+
+    <com.example.almaziskhakov.cinemaview.CinemaView
+        android:id="@+id/cinema"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:columnCount="8"
+        app:rowCount="6"
+        >
+
+    </com.example.almaziskhakov.cinemaview.CinemaView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/cinema"
+        android:onClick="onViewStatesClick"
+        android:text="@string/view_chair_states"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@+id/cinema"
+        android:layout_toEndOf="@+id/button"
+        android:layout_toRightOf="@+id/button"
+        android:onClick="onClearClick"
+        android:text="@string/clear"
+        />
+
+    <TextView
+        android:id="@+id/chair_states"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/reserved_and_sold_block"
+        android:padding="16dp"
+        />
+
+    <Switch
+        android:id="@+id/sold_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reserved_and_sold_block"
+        android:layout_alignRight="@+id/reserved_and_sold_block"
+        android:layout_below="@+id/button"
+        android:onClick="onBlockSoldClick"
+        android:text="@string/block_sold"
+        />
+
+    <Switch
+        android:id="@+id/reserved_and_sold_block"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/sold_block"
+        android:layout_marginTop="11dp"
+        android:onClick="onBlockSoldAndReserved"
+        android:text="@string/block_sold_and_reserved"
+        />
+
+</RelativeLayout>
